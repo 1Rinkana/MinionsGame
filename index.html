@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <div id="loginView" class="view">
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTc4bzVyZzV6NmZ4aDNhN2h0eDIzZGo3MGEweWhvMjBtaG4xODNudSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bh4jzePjmd9iE/giphy.gif" alt="Login Banner" class="view-image">
+
+    <h2>Passwort eingeben</h2>
+    <input type="password" id="passwordInput" placeholder="Passwort eingeben...">
+
+    <p id="hintMessage" class="hint hidden">💡 Code: Unser Jahrestag (der erste dd.mm.yyyy)</p>
+
+    <div class="button-group">
+      <button id="submitBtn" class="btn-primary" type="button">Einreichen</button>
+      <button id="hintBtn" class="btn-secondary" type="button">Hinweis</button>
+    </div>
+
+    <p id="errorMessage" class="error"></p>
+  </div>
+
+  <div id="quizView" class="view hidden">
+    <img id="quizImage" src="" alt="Question Image" class="view-image">
+
+    <h2 id="questionText">Hier steht die Frage.</h2>
+
+    <div id="standardButtons" class="button-group">
+      <button id="yesBtn" class="btn-success" type="button">Ja</button>
+      <button id="noBtn" class="btn-danger" type="button">Nein</button>
+    </div>
+
+    <div id="finalButtons" class="button-group hidden">
+      <button id="option1Btn" class="btn-primary" type="button">Popcorn</button>
+      <button id="option2Btn" class="btn-drink" type="button">Getränk</button>
+    </div>
+  </div>
+
+  <div id="gameOverView" class="view hidden">
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXZtc2kxdWNydnYxaDdhdmtsb2lpejltdHVrdzBzYXdidWYxeXZsMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kl82hgbL8bIHTYbtW7/giphy.gif" alt="Game Over" class="view-image">
+
+    <h2>Spiel vorbei! 💥</h2>
+    <p>Du hast NEIN gewählt! Die Minion weint, weil du keinen Preis gewonnen hast!</p>
+    <button class="play-again-btn btn-primary" type="button">Erneut versuchen</button>
+  </div>
+
+  <div id="endingAView" class="view hidden">
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmpzb2dud2gwNGFyajRwNzYwMXZpd3lmdWg1aXZnc3o5cGo5c3BqcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9Iy0Du7Ub7vq87NMZB/giphy.gif" alt="Popcorn" class="view-image">
+
+    <h2>Glückwunsch, Maksym schuldet dir ein Popcorn 🍿</h2>
+    <p>Du kannst Maksym ein Screenshot senden und er wird dir im Kino ein Popcorn bestellen.</p>
+
+    <button class="play-again-btn btn-primary" type="button">Erneut spielen</button>
+  </div>
+
+  <div id="endingBView" class="view hidden">
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTQ3bXNpZG4yc3o4MWRpMjVrdXZrMnl0Ymo1Ym1yMndibmZxb21kbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13FznCEnWSiUfK/giphy.gif" alt="Drink" class="view-image">
+
+    <h2>Glückwunsch, Maksym schuldet dir ein Getränk 🍹</h2>
+    <p>Du kannst ihm ein Screenshot senden und im Kino selbs entscheiden was du trinken willst.</p>
+
+    <button class="play-again-btn btn-primary" type="button">Erneut spielen</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
